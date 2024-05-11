@@ -6,7 +6,7 @@ Model 2 - Computing model
 """
 import dotenv
 
-from gempy_geotop.example_models import generate_south_model_base
+from gempy_geotop.example_models import generate_south_model_base 
 import gempy as gp
 import gempy_viewer as gpv
 
