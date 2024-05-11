@@ -15,45 +15,18 @@ its supported packages.
 
 ### Task:
 
-1) Setting up repository - Willem
+1. Setting up repository - Willem
+2. Main project structure - Miguel
+3. Pilot projects (priority):
+   1. Subsection of South model - Miguel (High)
+      1. Clay layer - Willem (High)
+      2. Well correlation 40km 40 km 
+   2. Zeeland - Reinder (Low)
+   3. Internal structural (Low)
+   4. Jan Diederik/Clinoform (Low)
 
-  1.1 Main project structure - Miguel
-
-2) Pilot projects (priority):
-
-  2.1 Subsection of South model - Miguel (High)
-
-    2.1.1 Clay layer - Willem (High)
-
-    2.1.2 Well correlation 40km 40 km
-
-  2.2 Zeeland - Reinder (Low)
-
-  2.4 Internal structural (Low)
-
-  2.5 Jan Diederik/Clinoform (Low)
-
-
-## TODO:
-
-- [x] Prepare structure
-    - [x] Test folder
-    - [x] Examples folder
-- [x] Read first data set ?with subsurface
-  - [x] Read borehole data of one layer
-- [x] First attempt to interpolate
-- [ ] Start fine-tuning the interpolation
-   
-## Data thoughts
-
-- We are missing orientation
-- The borehole data is very dense
-- A lot of formations, we should start with a subset
-
-- I will start with the South area for no special reason
 
 ### Data Types
-
 
 - Directly supported by GemPy:
 
