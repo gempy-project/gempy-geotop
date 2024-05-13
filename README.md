@@ -3,9 +3,8 @@
 This project is a first attempt to model some of the areas the Netherlands using GemPy and
 its supported packages.
 
-# Notes - Meeting 9.5.2024
 
-## Minimal Actionable actions for 2024
+## Minimal Actionable actions for 2024 (Meeting 9.5.2024)
 
 ### Resources:
 
@@ -16,7 +15,7 @@ its supported packages.
 ### Task:
 
 1. Setting up repository - Willem
-2. Main project structure - Miguel
+2. Main project structure - Miguel (done)
 3. Pilot projects (priority):
    1. Subsection of South model - Miguel (High)
       1. Clay layer - Willem (High)
@@ -26,7 +25,7 @@ its supported packages.
    4. Jan Diederik/Clinoform (Low)
 
 
-### Data Types
+## Data Types
 
 - Directly supported by GemPy:
 
@@ -36,8 +35,10 @@ its supported packages.
   - I will start by making the reader in this package and then I can decide if it is worth to move it to subsurface.
 
 **Auxiliary data**
+- Not implemented yet
 
 **Topography**
+- Not implemented yet
 
 
 ## Issues
