@@ -1,0 +1,39 @@
+.. _external_examples:
+
+Bayesian Inference Theory
+=========================
+
+Here you will find a collection of examples that demonstrate the basics of Bayesian inference theory and how to apply it to geology 
+using Pyro. 
+
+.. grid:: 3
+   :gutter: 1
+
+
+   .. grid-item-card:: Bayesian Inference Theory
+      :link: https://gempy-project.github.io/gempy_probability/examples_intro/index.html
+      :text-align: center
+      :class-title: pyvista-card-title
+
+      .. image:: https://gempy-project.github.io/gempy_probability/_images/Model_space2.png
+
+   .. grid-item-card:: Simple example
+      :link: https://gempy-project.github.io/gempy_probability/examples_first_example_of_inference/1-bayesian_basics/1.1_Intro_to_Bayesian_Inference.html#sphx-glr-examples-first-example-of-inference-1-bayesian-basics-1-1-intro-to-bayesian-inference-py
+      :text-align: center
+      :class-title: pyvista-card-title
+
+      .. image:: https://gempy-project.github.io/gempy_probability/_images/sphx_glr_1.1_Intro_to_Bayesian_Inference_004.png
+
+   .. grid-item-card:: More advanced example
+      :link: https://gempy-project.github.io/gempy_probability/examples_basic_geology/1-thickness_problem.html#sphx-glr-examples-basic-geology-1-thickness-problem-py
+      :text-align: center
+      :class-title: pyvista-card-title
+
+      .. image:: https://gempy-project.github.io/gempy_probability/_images/sphx_glr_1-thickness_problem_005.png
+
+
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+

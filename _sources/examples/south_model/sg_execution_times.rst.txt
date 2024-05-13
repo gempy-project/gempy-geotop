@@ -1,0 +1,15 @@
+
+:orphan:
+
+.. _sphx_glr_examples_south_model_sg_execution_times:
+
+
+Computation times
+=================
+**01:23.108** total execution time for **examples_south_model** files:
+
++----------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_examples_south_model_2_computing_south.py` (``2_computing_south.py``)   | 01:23.108 | 0.0 MB |
++----------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_examples_south_model_1_setting_up_south.py` (``1_setting_up_south.py``) | 00:00.000 | 0.0 MB |
++----------------------------------------------------------------------------------------+-----------+--------+

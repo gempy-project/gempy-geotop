@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Model 2 - Computing Model &#8212; GemPy GeoTop 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b849a4e9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=039e1c02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=f2a985cd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=e5fbc548" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=e031e9a9"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Zeeland" href="../zeeland/index.html" />
+    <link rel="prev" title="Model 1 - Reading GeoTop Data" href="1_setting_up_south.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-examples-south-model-2-computing-south-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code</p>
+</div>
+<section class="sphx-glr-example-title" id="model-2-computing-model">
+<span id="sphx-glr-examples-south-model-2-computing-south-py"></span><h1>Model 2 - Computing Model<a class="headerlink" href="#model-2-computing-model" title="Permalink to this heading">¶</a></h1>
+<p>This tutorial covers the steps required to compute a geological model using GemPy, including setup, computation, and visualization.</p>
+<p><strong>Step 1: Import Necessary Libraries</strong></p>
+<p>Importing the required libraries for environmental variable management, model generation, and visualization.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dotenv</span>
+<span class="kn">from</span> <span class="nn">gempy_geotop.example_models</span> <span class="kn">import</span> <span class="n">generate_south_model_base</span>
+<span class="kn">import</span> <span class="nn">gempy</span> <span class="k">as</span> <span class="nn">gp</span>
+<span class="kn">import</span> <span class="nn">gempy_viewer</span> <span class="k">as</span> <span class="nn">gpv</span>
+</pre></div>
+</div>
+<p><strong>Step 2: Load Environment Variables</strong></p>
+<p>Loading environment variables which may include paths or configurations necessary for the model generation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dotenv</span><span class="o">.</span><span class="n">load_dotenv</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<p><strong>Step 3: Generate Base Geological Model</strong></p>
+<p>We start by generating a base geological model using predefined settings. This function might configure
+basic layers, fault systems, and other geological parameters based on the southern region model.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geo_model</span> <span class="o">=</span> <span class="n">generate_south_model_base</span><span class="p">(</span><span class="n">group_slicer</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[120071, 209998, 370060, 419970, -901.5, 48.68]
+Could not find element &#39;KR&#39; in any group.
+Could not find element &#39;KW&#39; in any group.
+Could not find element &#39;WB&#39; in any group.
+Could not find element &#39;EE&#39; in any group.
+Could not find element &#39;KROE&#39; in any group.
+Could not find element &#39;DR&#39; in any group.
+Could not find element &#39;DT&#39; in any group.
+Could not find element &#39;DN&#39; in any group.
+Could not find element &#39;URTY&#39; in any group.
+Could not find element &#39;PE&#39; in any group.
+Could not find element &#39;UR&#39; in any group.
+Could not find element &#39;AP&#39; in any group.
+Could not find element &#39;IE&#39; in any group.
+Could not find element &#39;VE&#39; in any group.
+Could not find element &#39;RU&#39; in any group.
+Could not find element &#39;TO&#39; in any group.
+Could not find element &#39;DO&#39; in any group.
+Could not find element &#39;LA&#39; in any group.
+Could not find element &#39;HT&#39; in any group.
+Could not find element &#39;HO&#39; in any group.
+Could not find element &#39;MT&#39; in any group.
+Could not find element &#39;GU&#39; in any group.
+Could not find element &#39;VA&#39; in any group.
+Could not find element &#39;AK&#39; in any group.
+Active grids: [&#39;sections&#39;]
+</pre></div>
+</div>
+<p><strong>Step 4: Configure Interpolation Options</strong></p>
+<p>Setting the cache mode to <cite>CACHE</cite> to optimize interpolation calculations during model computation.
+This improves performance especially for complex models.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geo_model</span><span class="o">.</span><span class="n">interpolation_options</span><span class="o">.</span><span class="n">cache_mode</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">InterpolationOptions</span><span class="o">.</span><span class="n">CacheMode</span><span class="o">.</span><span class="n">CACHE</span>
+</pre></div>
+</div>
+<p><strong>Step 5: Compute the Geological Model</strong></p>
+<p>Computing the geological model using NumPy backend. We also enable GPU acceleration to further
+enhance the computation speed. The data type used is <cite>float64</cite> for high precision.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gp</span><span class="o">.</span><span class="n">compute_model</span><span class="p">(</span>
+    <span class="n">gempy_model</span><span class="o">=</span><span class="n">geo_model</span><span class="p">,</span>
+    <span class="n">engine_config</span><span class="o">=</span><span class="n">gp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">GemPyEngineConfig</span><span class="p">(</span>
+        <span class="n">backend</span><span class="o">=</span><span class="n">gp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">AvailableBackends</span><span class="o">.</span><span class="n">numpy</span><span class="p">,</span>
+        <span class="n">use_gpu</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Setting Backend To: AvailableBackends.numpy
+A size: (1907, 1907)
+CG iterations: 461
+A size: (1692, 1692)
+CG iterations: 420
+A size: (1365, 1365)
+CG iterations: 338
+A size: (1269, 1269)
+CG iterations: 397
+A size: (1087, 1087)
+CG iterations: 286
+A size: (1040, 1040)
+CG iterations: 343
+A size: (614, 614)
+CG iterations: 282
+A size: (489, 489)
+CG iterations: 232
+A size: (22, 22)
+CG iterations: 45
+</pre></div>
+</div>
+<div class="output_subarea output_html rendered_html output_result">
+<b>Solutions:</b> 4 Octree Levels, 10 DualContouringMeshes
+</div>
+<br />
+<br /><p><strong>Step 6: Visualize the Model in 3D</strong></p>
+<p>Creating a 3D visualization of the geological model using GemPy Viewer. We customize the view to show
+certain data elements and adjust aesthetics like opacity and labels visibility.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ve</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Vertical exaggeration for better depth perception</span>
+<span class="n">gempy_plot3d</span> <span class="o">=</span> <span class="n">gpv</span><span class="o">.</span><span class="n">plot_3d</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="n">geo_model</span><span class="p">,</span>
+    <span class="n">show_data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">show_lith</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">ve</span><span class="o">=</span><span class="n">ve</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">kwargs_pyvista_bounds</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">&#39;show_xlabels&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s1">&#39;show_ylabels&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s1">&#39;show_zlabels&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">kwargs_plot_data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;arrow_size&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+    <span class="n">kwargs_plot_structured_grid</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;opacity&#39;</span><span class="p">:</span> <span class="mf">.8</span><span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_2_computing_south_001.png" srcset="../../_images/sphx_glr_2_computing_south_001.png" alt="2 computing south" class = "sphx-glr-single-img"/><p><strong>Step 7: Create 2D Cross-Sections</strong></p>
+<p>In addition to 3D visualization, we generate 2D cross-sections of the model. This includes multiple sections
+to provide detailed views at different angles. Vertical exaggeration and projection distances are configured
+to enhance the visual output.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
+<span class="n">gpv</span><span class="o">.</span><span class="n">plot_2d</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="n">geo_model</span><span class="p">,</span>
+    <span class="n">section_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;section1&#39;</span><span class="p">,</span> <span class="s1">&#39;section2&#39;</span><span class="p">,</span> <span class="s1">&#39;section3&#39;</span><span class="p">],</span>
+    <span class="n">show_data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">show_boundaries</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">ve</span><span class="o">=</span><span class="n">ve</span><span class="p">,</span>
+    <span class="n">projection_distance</span><span class="o">=</span><span class="mi">100</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_2_computing_south_002.png" srcset="../../_images/sphx_glr_2_computing_south_002.png" alt="section1, section2, section3" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;gempy_viewer.modules.plot_2d.visualization_2d.Plot2D object at 0x7facc6093b80&gt;
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  23.108 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-south-model-2-computing-south-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/a44e70e0bf16ceedc76da04a39b9edc8/2_computing_south.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">2_computing_south.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/7d5bce025a2e56215ea6e488daeb4dfe/2_computing_south.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">2_computing_south.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">GemPy GeoTop</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Galleries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">All Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#examples-of-deper-settings">Examples of deper settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#internal-structures">Internal Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#south-model">South Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#zeeland">Zeeland</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../deep_geo/index.html">Examples of deper settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internal_structural/index.html">Internal Structures</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">South Model</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1_setting_up_south.html">Model 1 - Reading GeoTop Data</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Model 2 - Computing Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zeeland/index.html">Zeeland</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023-2024, GemPy GeoTop Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../../_sources/examples/south_model/2_computing_south.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

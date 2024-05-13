@@ -1,0 +1,19 @@
+
+
+.. _sphx_glr_examples_internal_structural:
+
+Internal Structures
+===================
+
+I do not rememeber what this was about. Ask Freek
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    </div>
+
