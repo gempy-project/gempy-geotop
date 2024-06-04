@@ -22,7 +22,7 @@ def test_gempy_compute_AP_surface():
     kernel_options.compute_weights = True
 
     kernel_options.range = 2  # TODO: Explain this parameter properly
-    geo_model.transform.scale[2] /= 6.5  # * This is a 6 factor on top of the unit cube
+    geo_model.input_transform.scale[2] /= 6.5  # * This is a 6 factor on top of the unit cube
 
     gp.compute_model(geo_model, engine_config=GemPyEngineConfig())
 

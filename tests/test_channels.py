@@ -104,8 +104,8 @@ def test_interpolate_channel_orientations_from_triangles():
 
         kernel_options.range = 1  # TODO: Explain this parameter properly
         # geo_model.transform.scale[2] /= 3.5  
-        geo_model.transform.scale[0] /= 20  
-        geo_model.transform.scale[1] /= 2
+        geo_model.input_transform.scale[0] /= 20  
+        geo_model.input_transform.scale[1] /= 2
         
         gp.compute_model(
             gempy_model=geo_model,
@@ -184,7 +184,7 @@ def test_interpolate_channel_orientations_from_surface_points():
         kernel_options.compute_condition_number = True
 
         kernel_options.range = 1.7  # TODO: Explain this parameter properly
-        geo_model.transform.scale[0] /=5 
+        geo_model.input_transform.scale[0] /=5 
 
         gp.compute_model(
             gempy_model=geo_model,

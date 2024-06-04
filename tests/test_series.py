@@ -34,7 +34,7 @@ def test_gempy_compute_group_1():
     kernel_options.compute_condition_number = True
 
     kernel_options.range = 2  # TODO: Explain this parameter properly
-    geo_model.transform.scale[2] /= 6.5  # * This is a 6 factor on top of the unit cube
+    geo_model.input_transform.scale[2] /= 6.5  # * This is a 6 factor on top of the unit cube
 
    
     gp.compute_model(geo_model, engine_config=GemPyEngineConfig(use_gpu=True))
@@ -66,7 +66,7 @@ def test_gempy_compute_group_2():
     kernel_options.compute_condition_number = True
 
     kernel_options.range = 2  # TODO: Explain this parameter properly
-    geo_model.transform.scale[2] /= 6.5  # * This is a 6 factor on top of the unit cube
+    geo_model.input_transform.scale[2] /= 6.5  # * This is a 6 factor on top of the unit cube
 
     # TODO: There is clearly a fault in this group
     # TODO: [ ] Import fault data. This should improve the condition number
@@ -114,7 +114,7 @@ def test_gempy_compute_group_3_with_faults():
     kernel_options.compute_condition_number = True
 
     kernel_options.range = 2  # TODO: Explain this parameter properly
-    geo_model.transform.scale[2] /= 1  # * This is a 6 factor on top of the unit cube
+    geo_model.input_transform.scale[2] /= 1  # * This is a 6 factor on top of the unit cube
 
     # TODO: There is clearly a fault in this group
     # TODO: [ ] Import fault data. This should improve the condition number

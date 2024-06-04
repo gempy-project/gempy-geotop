@@ -34,7 +34,7 @@ def generate_south_model_base(group_slicer)-> gp.data.GeoModel:
     kernel_options.kernel_solver = Solvers.SCIPY_CG
     kernel_options.compute_condition_number = True
     kernel_options.range = 0.5  # TODO: Explain this parameter properly
-    geo_model.transform.scale[2] /= 2  # * This is a 6 factor on top of the unit cube
+    geo_model.input_transform.scale[2] /= 2  # * This is a 6 factor on top of the unit cube
     return geo_model
 
 
